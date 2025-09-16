@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo – Gabriel Simeone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f0f2f5;
+      color: #333;
+    }
+    header {
+      background: #34495e;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 4px solid #2c3e50;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+    }
+    #clock {
+      font-size: 1rem;
+      font-weight: bold;
+      font-family: monospace;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      padding: 30px;
+      line-height: 1.5;
+    }
+    h2 {
+      border-bottom: 2px solid #34495e;
+      padding-bottom: 6px;
+      margin-top: 25px;
+      color: #2c3e50;
+    }
+    p {
+      margin: 8px 0;
+    }
+    .highlight {
+      color: #2c3e50;
+      font-weight: bold;
+    }
+    .section {
+      padding: 10px 0;
+      background: #f9f9f9;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+      background: #34495e;
+      color: #fff;
+      font-size: 0.85rem;
+      border-top: 3px solid #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Currículo – Gabriel Simeone</h1>
+    <div id="clock"></div>
+  </header>
+
+  <div class="container">
+    <div class="section">
+      <h2>Dados Pessoais</h2>
+      <p><span class="highlight">Nome:</span> Gabriel Simeone Santos Rocha</p>
+      <p><span class="highlight">RG:</span> 20.269.702-97</p>
+      <p><span class="highlight">CPF:</span> 089.918.425-18</p>
+      <p><span class="highlight">Título de Eleitor:</span> 157331150566</p>
+      <p><span class="highlight">E-mail:</span> biel.simeone@gmail.com</p>
+      <p><span class="highlight">Endereço:</span> Coroa Vermelha – Santa Cruz Cabrália, BA</p>
+    </div>
+
+    <div class="section">
+      <h2>Objetivo</h2>
+      <p><em>“Profissional comprometido, proativo e pronto para contribuir em todas as etapas da obra, garantindo eficiência e qualidade no trabalho.”</em></p>
+    </div>
+
+    <div class="section">
+      <h2>Experiência</h2>
+      <p>Disponibilidade para apoiar em todas as funções de obra: preparo de materiais, limpeza do local, auxílio em serviços de alvenaria e acabamento. Sempre atento a aprender e executar com eficiência.</p>
+    </div>
+
+    <div class="section">
+      <h2>Formação</h2>
+      <p>Ensino Médio Completo</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Gabriel Simeone – Currículo Digital
+  </footer>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      document.getElementById('clock').textContent = now.toLocaleTimeString('pt-BR', options);
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+</body>
+</html>
