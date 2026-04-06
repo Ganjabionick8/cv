@@ -1,118 +1,213 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Currículo – Gabriel Simeone</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #f0f2f5;
-      color: #333;
-    }
-    header {
-      background: #34495e;
-      color: #fff;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 4px solid #2c3e50;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.6rem;
-    }
-    #clock {
-      font-size: 1rem;
-      font-weight: bold;
-      font-family: monospace;
-    }
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-      padding: 30px;
-      line-height: 1.5;
-    }
-    h2 {
-      border-bottom: 2px solid #34495e;
-      padding-bottom: 6px;
-      margin-top: 25px;
-      color: #2c3e50;
-    }
-    p {
-      margin: 8px 0;
-    }
-    .highlight {
-      color: #2c3e50;
-      font-weight: bold;
-    }
-    .section {
-      padding: 10px 0;
-      background: #f9f9f9;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-    footer {
-      text-align: center;
-      padding: 15px 0;
-      margin-top: 20px;
-      background: #34495e;
-      color: #fff;
-      font-size: 0.85rem;
-      border-top: 3px solid #2c3e50;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Simeone | Suporte & Hospitalidade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        :root {
+            --glass: rgba(255, 255, 255, 0.1);
+            --border: rgba(255, 255, 255, 0.2);
+            --text: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            /* Fundo com gradiente ou imagem de Coroa Vermelha com blur */
+            background: linear-gradient(135deg, #1e1e2f 0%, #2d3436 100%);
+            background-attachment: fixed;
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            color: #00d2ff;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #00d2ff;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::after {
+            content: "";
+            height: 1px;
+            background: var(--border);
+            flex: 1;
+            margin-left: 15px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .card h3 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .card p {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            opacity: 0.8;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #00d2ff;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Currículo – Gabriel Simeone</h1>
-    <div id="clock"></div>
-  </header>
 
-  <div class="container">
-    <div class="section">
-      <h2>Dados Pessoais</h2>
-      <p><span class="highlight">Nome:</span> Gabriel Simeone Santos Rocha</p>
-      <p><span class="highlight">RG:</span> 20.269.702-97</p>
-      <p><span class="highlight">CPF:</span> 089.918.425-18</p>
-      <p><span class="highlight">Título de Eleitor:</span> 157331150566</p>
-      <p><span class="highlight">E-mail:</span> biel.simeone@gmail.com</p>
-      <p><span class="highlight">Endereço:</span> Coroa Vermelha – Santa Cruz Cabrália, BA</p>
-    </div>
+<div class="container">
+    <header>
+        <h1>Gabriel Simeone</h1>
+        <p class="subtitle">Suporte Técnico & Gestão de Hospitalidade</p>
+        <div class="contact-info">
+            Coroa Vermelha - BA | biel.simeone@gmail.com | [Seu Novo Número Aqui]
+        </div>
+    </header>
 
-    <div class="section">
-      <h2>Objetivo</h2>
-      <p><em>“Profissional comprometido, proativo e pronto para contribuir em todas as etapas da obra, garantindo eficiência e qualidade no trabalho.”</em></p>
-    </div>
+    <section>
+        <h2>Perfil Profissional</h2>
+        <p style="line-height: 1.6; opacity: 0.9;">
+            Profissional técnico versátil com visão 360º sobre infraestrutura digital e física. Especialista em resolução de problemas sob pressão, focado em garantir a continuidade operacional de serviços (Hardware, Redes e Atendimento). Domínio de ferramentas de IA para otimização de fluxos de trabalho.
+        </p>
+    </section>
 
-    <div class="section">
-      <h2>Experiência</h2>
-      <p>Disponibilidade para apoiar em todas as funções de obra: preparo de materiais, limpeza do local, auxílio em serviços de alvenaria e acabamento. Sempre atento a aprender e executar com eficiência.</p>
-    </div>
+    <section>
+        <h2>Experiência & Soluções</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Sistemas & Software</h3>
+                <p>Manutenção de sistemas operacionais, recuperação de software e implementação de soluções web via GitHub/Terminal.</p>
+            </div>
+            <div class="card">
+                <h3>Infraestrutura de Rede</h3>
+                <p>Configuração de redes Wi-Fi, diagnóstico de latência e crimpagem de cabos. Garantia de conectividade estável para hóspedes.</p>
+            </div>
+            <div class="card">
+                <h3>Hardware & Elétrica</h3>
+                <p>Reparo de PCs/Celulares e manutenção elétrica residencial básica. Autonomia total para reparos imediatos 24/7.</p>
+            </div>
+            <div class="card">
+                <h3>Manutenção Predial</h3>
+                <p>Experiência em serviços gerais (pintura, montagem de móveis e hidráulica). Resolução física de pendências estruturais.</p>
+            </div>
+        </div>
+    </section>
 
-    <div class="section">
-      <h2>Formação</h2>
-      <p>Ensino Médio Completo</p>
-    </div>
-  </div>
+    <section>
+        <h2>Diferenciais para o Hotel</h2>
+        <ul>
+            <li>Disponibilidade para escala noturna (Madrugada).</li>
+            <li>Capacidade de realizar Check-in/Check-out com agilidade sistêmica.</li>
+            <li>Perfil proativo: Resolve bugs de TI e problemas estruturais sem necessidade de terceirizados.</li>
+            <li>Domínio de Prompt Engineering para automação de tarefas administrativas.</li>
+        </ul>
+    </section>
 
-  <footer>
-    © 2025 Gabriel Simeone – Currículo Digital
-  </footer>
+    <footer>
+        Gabriel Simeone S. Rocha &copy; 2026 | Desenvolvido em vIsAo N3
+    </footer>
+</div>
 
-  <script>
-    function updateClock() {
-      const now = new Date();
-      const options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
-      document.getElementById('clock').textContent = now.toLocaleTimeString('pt-BR', options);
-    }
-    setInterval(updateClock, 1000);
-    updateClock();
-  </script>
 </body>
 </html>
